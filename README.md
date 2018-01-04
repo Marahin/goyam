@@ -1,4 +1,7 @@
 # GoYAM
+
+  [![pipeline status](https://git.3lab.re/marahin/goyam/badges/master/pipeline.svg)](https://git.3lab.re/marahin/goyam/pipelines?scope=branches)
+
 #### Golang library & standalone program for YAML comparison
 ****
 **GoYAM** started as a simple program that I’ve used for YAML files comparison (in particular: two swagger API definitions).

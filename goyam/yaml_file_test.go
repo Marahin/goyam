@@ -42,7 +42,7 @@ func TestLoadYAMLFile(t *testing.T) {
 		want    YAMLMap
 		wantErr bool
 	}{
-		{"load small YAML file", args{"./examples/yaml files/smaller_yaml_1.yml"}, YAMLMap{"name": "John", "height": "123", "data": YAMLMap{"age": 29, "profession": "Plumber"}}, false},
+		{"load small YAML file", args{"../examples/yaml files/smaller_yaml_1.yml"}, YAMLMap{"name": "John", "height": "123", "data": YAMLMap{"age": 29, "profession": "Plumber"}}, false},
 		{"load inexistent YAML file", args{"./blah"}, nil, true},
 	}
 	for _, tt := range tests {

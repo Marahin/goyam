@@ -1,0 +1,29 @@
+image: golang:latest
+
+before_script:
+    - ln -s /builds /go/src/git.3lab.re
+    - cd /go/src/git.3lab.re/marahin/goyam
+    - go env
+    - apt update && apt install tree && tree .
+    - go get git.3lab.re/marahin/goyam
+stages:
+    - standalone
+    - package
+
+standalone_compile:
+    stage: standalone
+    script:
+        - go build -o /dev/null
+
+package_test:
+    stage: package
+    script:
+        - cd goyam/
+        - go test
+
+package_build:
+    stage: package
+    script:
+        - cd goyam/
+        - go install
+
